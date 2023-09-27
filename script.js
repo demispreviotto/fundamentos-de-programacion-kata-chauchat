@@ -1,10 +1,32 @@
-function reload() {
-    for (let i = 0; i <= 7; i++) {
-        if (i % 3 === 0) {
-            console.log('')
+let cargador = 7;
+
+
+function chauchat(cargador) {
+    for (let i = 0; i < cargador; i++) {
+        let random = Math.floor(Math.random() * 10)
+        // console.log(random)
+        if (i % 4 === 0) {
+            console.log(random)
+            console.log('```')
+            console.log(i)
+            cargador += 1;
+        } else {
+            if (random >= 8) {
+                console.log(random)
+                console.log('Pium!')
+                console.log(i)
+                // cargador -= 1;
+            } else {
+                console.log(random)
+                console.log('Illo, me he quedao pillá!');
+                break;
+            }
         }
-        console.log('Pium!')
-    }
-    console.log('Oh, no, Its empty!! Reload quick!!!("reload()")')
+        i === 7 && console.log('Oh, no, Esta vacio!! Recarga!!!("recargar()")')
+    };
 }
-reload()
+// }
+chauchat(cargador);
+function recargar() {
+    chauchat(cargador)
+}
